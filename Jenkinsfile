@@ -4,6 +4,7 @@ pipeline {
     environment {
         DOCKER_HUB_REPO = 'gouthamrohan/dockerimages'
         EC2_IP = '13.232.72.77'
+        DOCKERFILE_PATH = '/home/ec2-user/node-app'
     }
 
     stages {
@@ -16,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("${DOCKER_HUB_REPO}:${env.BUILD_ID}")
+                   docker.build("${DOCKER_HUB_REPO}:${env.BUILD_ID}", "-f ${DOCKERFILE_PATH}/Dockerfile .")
                 }
             }
         }
