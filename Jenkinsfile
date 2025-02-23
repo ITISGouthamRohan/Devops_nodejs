@@ -16,8 +16,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("${DOCKER_HUB_REPO}:${env.BUILD_ID}","/home/ec2-user/node-app
-")
+                    docker.build("${DOCKER_HUB_REPO}:${env.BUILD_ID}")
                 }
             }
         }
