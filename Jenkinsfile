@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                   docker.build("${DOCKER_HUB_REPO}:${env.BUILD_ID}", "-f ${DOCKERFILE_PATH}/Dockerfile .")
+                   docker.build("${DOCKER_HUB_REPO}:${env.BUILD_ID}", "-f ${DOCKERFILE_PATH}/ .")
                 }
             }
         }
