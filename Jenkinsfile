@@ -4,7 +4,6 @@ pipeline {
     environment {
         DOCKER_HUB_REPO = 'gouthamrohan/dockerimages'
         EC2_IP = '13.232.72.77'
-        DOCKERFILE_PATH = '/home/ec2-user/node-app'
     }
 
     stages {
