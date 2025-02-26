@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_HUB_REPO = 'gouthamrohan/dockerimages'
-        EC2_IP = '13.127.42.2'
+        EC2_IP = '65.0.125.220'
     }
 
     stages {
